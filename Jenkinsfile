@@ -6,14 +6,14 @@ pipeline {
         DOCKER_IMAGE = "vote"  // Change to your Docker Hub repo name
         DOCKER_TAG = "latest"
         DOCKER_HUB_CREDENTIALS = "docker-hub-credentials"  // Set this in Jenkins credentials
-        EC2_INSTANCE = "ubuntu@//99.79.58.96"  // Change to your EC2 public IP
+        EC2_INSTANCE = "ubuntu@99.79.58.96"  // Change to your EC2 public IP
         SSH_CREDENTIALS = "ec2-ssh-key"  // Set this in Jenkins credentials
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: ''https://github.com/Tunexopez/elections-vote.git
+                git branch: 'main', url:'https://github.com/Tunexopez/elections-vote.git'
             }
         }
 
